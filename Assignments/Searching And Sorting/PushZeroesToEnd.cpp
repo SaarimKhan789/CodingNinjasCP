@@ -14,9 +14,7 @@ void pushZeroesEnd(int *arr, int size)
         if (arr[i] != 0)
         {
 
-            int t = arr[i];
-            arr[i] = arr[j];
-            arr[j] = t;
+            swap(arr[i], arr[j]);
 
             i++;
             j++;
