@@ -1,27 +1,27 @@
-#include<iostream>
-#include<math.h>
+#include <fstream>
+#include <math.h>
 using namespace std;
 
 int main()
 {
 
-#ifndef ONLINE_JUDGE
-	freopen("Input.txt", "r", stdin);
-	freopen("Output.txt", "w", stdout);
-#endif
+	ifstream in;
+	in.open("Input.txt");
+	ofstream out;
+	out.open("Output.txt");
 
 	int n;
-	cin >> n;
+	in >> n;
 
 	int dec = 0, x = 0;
 
-	while (n) {
+	while (n)
+	{
 
 		int r = n % 10;
 		dec += r * (int)pow(2, x++);
 		n /= 10;
 	}
 
-	cout << dec;
-
+	out << dec;
 }
