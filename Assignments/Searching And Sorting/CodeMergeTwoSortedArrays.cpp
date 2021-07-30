@@ -40,36 +40,31 @@ void merge(int *arr1, int size1, int *arr2, int size2, int *ans)
 int main()
 {
 
-    // ifstream in;
-    // in.open("Input.txt");
-    // ofstream out;
-    // out.open("Output.txt");
-
-#ifndef ONLINE_JUDGE
-    freopen("Input.txt", "r", stdin);
-    freopen("Output.txt", "w", stdout);
-#endif
+    ifstream in;
+    in.open("Input.txt");
+    ofstream out;
+    out.open("Output.txt");
 
     int t;
-    cin >> t;
+    in >> t;
     while (t--)
     {
         int n1, n2;
-        cin >> n1;
+        in >> n1;
         int *arr1 = new int[n1];
 
         for (int i = 0; i < n1; i++)
         {
-            cin >> arr1[i];
+            in >> arr1[i];
         }
 
-        cin >> n2;
+        in >> n2;
 
         int *arr2 = new int[n2];
 
         for (int i = 0; i < n2; i++)
         {
-            cin >> arr2[i];
+            in >> arr2[i];
         }
 
         int *ans = new int[n1 + n2];
@@ -78,9 +73,9 @@ int main()
 
         for (int i = 0; i < n1 + n2; i++)
         {
-            cout << ans[i] << " ";
+            out << ans[i] << " ";
         }
-        cout << endl;
+        out << endl;
     }
     return 0;
 }
