@@ -6,7 +6,7 @@ using namespace std;
 vector<int> longestConsecutiveIncreasingSequence(int *arr, int n)
 {
 
-    vector<pair<int, int>> ans;
+    vector< pair<int, int > > ans;
     int maxlength = 0;
 
     unordered_map<int, bool> map;

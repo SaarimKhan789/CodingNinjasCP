@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include <unordered_set>
 using namespace std;
+
 int findDuplicate(int *arr, int n)
 {
 
